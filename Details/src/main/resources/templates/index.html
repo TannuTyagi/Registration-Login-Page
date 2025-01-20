@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Welcome to Pie InfoSystems</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <style>
+        /* Background image styling */
+        body {
+            background-image: url('/images/PIE BACKGROUND2.jpg'); /* Use the correct image path */
+            background-size: cover; /* Ensures the image covers the entire page */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents repeating */
+            height: 100vh; /* Full viewport height */
+        }
+
+        .content-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 40px;
+            border-radius: 10px;
+            margin: auto;
+            width: 50%; /* Adjust the width as needed */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for better aesthetics */
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        h1, h3 {
+            margin-bottom: 20px; /* Adds spacing between elements */
+        }
+
+        .btn {
+            width: 150px; /* Uniform button width */
+            margin: 10px 0; /* Adds spacing between buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container content-container">
+        <h1>Welcome to Pie InfoSystems</h1>
+        <div>
+            <h3><a class="btn btn-primary" th:href="@{/users}">List of Users</a></h3>
+            <h3><a class="btn btn-success" th:href="@{/register}">Register</a></h3>
+            <h3><a class="btn btn-info" th:href="@{/login}">Login</a></h3>
+        </div>
+    </div>
+</body>
+</html>
